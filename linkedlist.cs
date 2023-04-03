@@ -26,6 +26,7 @@ namespace Linkedlist
                 }
                 temp.next = node;
             }
+            Console.WriteLine("{0} inserted into Linked List", node.data);
         }
 
         public void Display()
@@ -42,39 +43,22 @@ namespace Linkedlist
                 temp = temp.next;
             }
         }
-        internal Node InsertAtPerticlarPosition(int position, int Data)
+
+        internal Node RemoveFirstNode()
         {
-            if (position < 1)
-                Console.WriteLine("Invalid position");
-            if (position == 1)
+            if (this.head == null)
             {
-                var newNode = new Node(Data);
-                newNode.next = this.head;
-                head = newNode;
+                return null;
             }
-            else
-            {
-                while (position-- != 0)
-                {
-                    if (position == 1)
-                    {
-                        Node node = new Node(Data);
-                        node.next = this.head.next;
-                        head.next = node;
-                        break;
-                    }
-                    head = head.next;
-                }
-                if (position != 1)
-                    Console.WriteLine("Position out of range");
-            }
-            return head;
+            this.head = this.head.next;
+            return this.head;
         }
-
-
 
     }
 }
+
+   
+
     
 
     
