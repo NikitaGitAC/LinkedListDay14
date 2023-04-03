@@ -11,13 +11,18 @@ namespace Linkedlist
 
             linkedlist linkedList = new linkedlist();
             linkedList.Add(56);
+            linkedList.Add(30);
             linkedList.Add(70);
             linkedList.Display();
-            linkedList.InsertAtPerticlarPosition(2, 30);
-            Console.WriteLine("***************************");
 
-            Console.WriteLine("30 inserted between 56 and 70");
+            Console.WriteLine("LinkedList Sequence: 56->30->70");
+
+
+
+            linkedList.RemoveFirstNode();
             linkedList.Display();
+            Console.WriteLine("Final Sequence: 30->70");
         }
     }
+    
 }
