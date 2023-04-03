@@ -28,7 +28,6 @@ namespace Linkedlist
             }
             Console.WriteLine("{0} inserted into Linked List", node.data);
         }
-
         public void Display()
         {
             Node temp = this.head;
@@ -44,23 +43,18 @@ namespace Linkedlist
             }
         }
 
-        public Node Deletelastnumber()
+        internal Node Search(int value)
         {
-            if (head == null)
+            while (this.head != null)
             {
-                return null;
+                if (this.head.data == value)
+                {
+
+                    Console.WriteLine("The key {0} is present.", value);
+                }
+                this.head = this.head.next;
             }
-            if (head.next == null)
-            {
-                return null;
-            }
-            Node NewNode = head;
-            while (NewNode.next.next != null)
-            {
-                NewNode = NewNode.next;
-            }
-            NewNode.next = null;
-            return head;
+            return null;
         }
     }
 }
