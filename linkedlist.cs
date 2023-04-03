@@ -44,7 +44,7 @@ namespace Linkedlist
             }
         }
 
-        internal Node RemoveFirstNode()
+        internal Node DeleteFirstNumber()
         {
             if (this.head == null)
             {
