@@ -26,7 +26,7 @@ namespace Linkedlist
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into Linked List", node.data);
+            //Console.WriteLine("{0} inserted into Linked List", node.data);
         }
         public void Display()
         {
