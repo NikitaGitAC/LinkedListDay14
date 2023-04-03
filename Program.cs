@@ -14,10 +14,7 @@ namespace Linkedlist
             linkedList.Add(30);
             linkedList.Add(70);
             linkedList.Display();
-            Console.WriteLine("LinkedList Sequence: 56->30->70");
-            linkedList.Deletelastnumber();
-            linkedList.Display();
-            Console.WriteLine("Final Sequence: 30->70");
+            linkedList.Search(30);
         }
     }
     
